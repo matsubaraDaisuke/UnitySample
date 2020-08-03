@@ -1,7 +1,7 @@
 # UnitySample
 
 # Branch
- スライドページのサンプル
+ スライドページのサンプル 
  https://github.com/matsubaraDaisuke/UnitySample/blob/SlidePages
  
  タブとハンバーガーメニューのサンプル
