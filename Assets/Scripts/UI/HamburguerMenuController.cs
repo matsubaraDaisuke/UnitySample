@@ -19,7 +19,7 @@ public class HamburguerMenuController : MonoBehaviour
     void Start()
     {
         CloseButton = GameObject.Find("MenuPanel/MenuHeader/CloseButton").GetComponent<Button>();
-        CloseButton.onClick.AddListener( ()=>{ CloseMenu(); });
+        CloseButton.onClick.AddListener( ()=>{ Close(); });
 
         HomeSceneButton = GameObject.Find("MenuPanel/MenuContent/HomeSceneButton").GetComponent<Button>();
         AddSceneButton = GameObject.Find("MenuPanel/MenuContent/AddSceneButton").GetComponent<Button>();
@@ -37,12 +37,25 @@ public class HamburguerMenuController : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        MenuBoadAnimator.speed = 1;
+        MenuBoadAnimator.ResetTrigger("Close");
+    }
+
     public void OpenMenu(){
         gameObject.SetActive( true );
     }
 
-    public void CloseMenu(){
-        MenuBoadAnimator.SetTrigger("Close");
+    public void Close()
+    {
+        //アニメーターのトリガーをオンにする
         //gameObject.SetActive( false );
+        MenuBoadAnimator.SetTrigger("Close");
+    }
+
+    public void CloseMenu(){
+        //MenuBoadAnimator.SetTrigger("Close");
+        gameObject.SetActive( false );
     }
 }
