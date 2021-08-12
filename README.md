@@ -3,7 +3,7 @@
 # Branch
  スライドページのサンプル 
  
- https://github.com/matsubaraDaisuke/UnitySample/blob/SlidePages
+ https://github.com/matsubaraDaisuke/UnitySample/tree/SlidePages
  
  タブとハンバーガーメニューのサンプル
  
